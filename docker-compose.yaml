@@ -1,0 +1,73 @@
+version: '3.7'
+services:
+  uberlink-backend:
+    build:
+      context: ./backend
+    ports:
+      - "8080:8080"
+    restart: always
+    depends_on:
+      - uberlink-db
+    environment:
+      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
+      SPRING_DATASOURCE_USERNAME: ${MYSQL_DB_USER}
+      SPRING_DATASOURCE_PASSWORD: ${MYSQL_DB_PASSWORD}
+      SPRING_JPA_HIBERNATE_DDL-AUTO: update
+      SPRING_MAIL_USERNAME: ${SPRING_MAIL_USERNAME}
+      SPRING_MAIL_PASSWORD: ${SPRING_MAIL_PASSWORD}
+    networks:
+      - uberlink-network
+
+  uberlink-frontend:
+    build:
+      context: ./frontend # Use an image built from the specified dockerfile in the `polling-app-client` directory.
+        #ports:
+      #- "3000:443"
+      #- "80:80" # HOST : CONTAINER 
+    restart: always
+    depends_on:
+      - uberlink-backend
+    volumes:
+      # bind mount - mount dir from host to container
+      # - ./web/public_html:/public_html
+      - ./web/conf.d:/etc/nginx/conf.d
+      - ./web/dhparam:/etc/nginx/dhparam
+      - ./web/certbot/data:/usr/share/nginx/html/letsencrypt
+      - ./web/certbot/conf/:/etc/nginx/ssl
+    networks:
+      - uberlink-network
+        #command: "sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./web/certbot/data:/usr/share/nginx/html/letsencrypt
+      - ./web/certbot/conf/:/etc/letsencrypt
+      - ./web/certbot/logs:/var/log/letsencrypt
+    depends_on:
+      - uberlink-frontend
+    #command:
+      #certonly --webroot --webroot-path=/usr/share/nginx/html/letsencrypt --email admin@gmail.com --agree-tos --no-eff-email -d uberlink.tech
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"  
+
+  uberlink-db:
+    image: mysql:5.7
+    container_name: uberlink-db
+    ports:
+      - "3307:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_USER: ${MYSQL_DB_USER}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_DB_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DB_NAME}
+    volumes:
+      - uberlink-db-volume:/var/lib/mysql
+    networks:
+      - uberlink-network
+
+volumes:
+  uberlink-db-volume:
+  docker_certs:
+
+networks:
+  uberlink-network:

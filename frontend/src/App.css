@@ -1,0 +1,1481 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--primary-font);
+  color: var(--dark-black);
+letter-spacing: var(--default-letter-spacing);
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: .1rem;
+ 
+}
+
+
+
+body {
+  background-image: url("../src/assets/pattern-background.svg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  height: 76vh;
+
+  background-position: center;
+}
+
+:root {
+  --primary-font: 'Poppins', sans-serif;;
+  --primary-purple: #6934FF;
+  --hover-purple: #5c25f1;
+  --dark-purple: #4317C0;
+  --dark-black: #111111;
+  --input-light: #f8f8f8;
+  --input-gray: #F2F2F2;
+  --error-red: #FF2323;
+  --success-green-light: #12C93B;
+  --success-green-dark: #15b412;
+  --failure-red-light: #D32929;
+  --failure-red-dark: #C01717;
+  --dark-gray: #939393;
+  --darker-gray: #2D2D2D;
+  --form-error-text: .7rem;
+  --default-letter-spacing: -.015rem;
+  --desktop-heading-primary: 3.2rem;
+  --desktop-heading-secondary: 2.125rem;
+  --desktop-subheading: 1.375rem;
+  --desktop-paragraph-primary: .9rem;
+  --desktop-input: 1rem;
+  --desktop-label: .85rem;
+  --mobile-heading-primary: 1.625rem;
+  --mobile-heading-secondary: 1.2rem;
+  --mobile-paragraph: .75rem;
+  --mobile-input: .8rem;
+  --mobile-label: .7rem;
+  --mobile-subheading: 1rem;
+  --tablet-heading-primary: 2.2rem;
+  --tablet-heading-secondary: 1.4rem;
+  --tablet-paragraph: .82rem;
+  --tablet-input: .85rem;
+  --laptop-heading-primary: 2.7rem;
+  --laptop-heading-secondary: 2rem;
+  --laptop-paragraph: .85rem;
+  --laptop-input: .9rem;
+  --default-border-radius: 8px;
+
+}
+
+
+
+#password-icon {
+  height: 17px;
+  position: absolute;
+  right: 2.8rem;
+  margin-top: 2.5rem;
+  fill: var(--dark-black);
+}
+
+
+#form-error-status {
+  color: red;
+  font-size: var(--form-error-text);
+  margin-top: .3rem;
+  float: right; 
+
+}
+
+#login-register-prompt {
+  font-weight: 600;
+  color: var(--primary-purple);
+}
+
+
+.navbar-container {
+  background-color: var(--primary-purple);
+
+}
+
+
+.navbar-container .container-fluid {
+
+  width: 95%;
+}
+
+.navbar-container h3{
+  color: #fff;
+  font-weight: 600;
+
+}
+
+.navbar-container .hamburger-menu {
+  border: none;
+  margin-right: -.5rem;
+  padding: 0;
+}
+
+.navbar-container p {
+  color: #fff;
+  text-align: center;
+  font-size: var(--mobile-input);
+  font-weight: 500;
+}
+
+.navbar-container .navbar-nav button{
+  background-color: transparent;
+  border: none;
+  padding: 1rem;
+  font-weight: 500;
+  font-size: var(--mobile-paragraph);
+  width: 100%;
+  color: #fff;
+}
+
+
+.navbar-container .contact-btn {
+  margin: 1rem 0 1rem 0;
+  background-color: var(--dark-purple);
+  color: #fff;
+  font-size: var(--mobile-paragraph);
+  padding: .8rem;
+  width: 100%;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--default-border-radius);
+  transition: .3s ease-in-out;
+}
+
+.landing-page .content,
+.contact-page .content,
+.link-not-found-page .content,
+.login-page .content,
+.register-page .content,
+.my-uberlinks-page .content,
+.reset-password-page .content,
+.email-confirmed-page .content{
+  padding-top: 3rem;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.landing-page .content .main-section h1,
+.contact-page .content .main-section h1,
+.link-not-found-page .content .main-section h1,
+.my-uberlinks-page .content .main-section h1,
+.reset-password-page .content .main-section h1,
+.email-confirmed-page .content .main-section h1{
+  margin-bottom: .4rem;
+  font-weight: 600;
+  font-size: var(--mobile-heading-primary);
+  letter-spacing: var(--heading-letter-spacing);
+  
+}
+
+.landing-page .content .main-section p,
+.contact-page .content .main-section p,
+.link-not-found-page .content .main-section p,
+.my-uberlinks-page .content .main-section p,
+.reset-password-page .content .main-section p,
+.email-confirmed-page .content .main-section p {
+  color: var(--dark-gray);
+  font-size: var(--mobile-paragraph);
+}
+
+.landing-page .content .search-section {
+  margin-top: 4rem;
+
+  max-width: 920px;
+}
+
+.landing-page .content .search-section .search-form {
+  position: relative;
+  
+}
+
+.landing-page .content .search-section .search-form .icon {
+  height: 16px;
+  fill: var(--dark-gray);
+  position: absolute;
+  right: 2.5rem;
+  top: 3.2rem;
+  cursor: pointer;
+}
+
+
+.landing-page .content .search-section .try-again-prompt {
+  float: right;
+  font-size: var(--mobile-input);
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: .4rem;
+}
+
+
+
+.landing-page .content .search-section .form-control {
+  
+  background-color: var(--input-light);
+  box-shadow: none;
+  border-radius: var(--default-border-radius);
+  font-size: var(--mobile-input);
+  padding: 1.35rem;
+  border: 2px solid var(--input-gray);
+  width: 100%;
+  margin-bottom: .6rem;
+
+}
+
+.landing-page .content .search-section .form-control-error {
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: var(--default-border-radius);
+  font-size: var(--mobile-input);
+
+  border: 2px solid var(--error-red);
+}
+
+.landing-page .content .search-section .form-control::placeholder {
+  color: var(--dark-gray);
+}
+
+.landing-page .content .search-section .form-control:focus,
+.contact-page .content .contact-form .form-control:focus,
+.login-page .content .login-form .form-control:focus,
+.register-page .content .register-form .form-control:focus,
+.forgot-password-modal .modal-content .form-control:focus,
+.reset-password-page .content .reset-password-form .form-control:focus{
+  border: 2px solid var(--primary-purple);
+}
+
+.landing-page .content .search-section .original-link-result {
+  margin-top: .4rem;
+  font-size: var(--mobile-paragraph);
+  text-align: left;
+}
+
+.landing-page .content .search-section .search-btn,
+.contact-page .content .contact-form .send-message-btn,
+.login-page .content .login-form .login-btn,
+.register-page .content .register-form .register-btn,
+.link-not-found-page .content .back-to-home-btn,
+.reset-password-page .content .reset-password-form .reset-password-btn {
+  background-color: var(--primary-purple);
+  color: #fff;
+  font-size: var(--mobile-input);
+  padding: .8rem;
+  width: 100%;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--default-border-radius);
+  transition: .3s ease-in-out;
+  
+}
+
+.landing-page .content .search-section .search-btn:hover,
+.contact-page .content .contact-form .send-message-btn:hover,
+.link-not-found-page .content .back-to-home-btn:hover,
+.login-page .content .login-form .login-btn:hover,
+.register-page .content .register-form .register-btn:hover,
+.forgot-password-modal .send-forgot-password-btn:hover,
+.reset-password-page .content .reset-password-form .reset-password-btn:hover {
+  background-color: var(--hover-purple);
+}
+
+
+.landing-details-page {
+  margin: 4.5rem 0 7rem 0;
+}
+
+.landing-details-page .content {
+ 
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+.landing-details-page .content .details-container h3{
+  font-weight: 600;
+  font-size: var(--mobile-heading-secondary);
+  padding: .1rem 0 .1rem 0;
+  letter-spacing: var(--heading-letter-spacing);
+}
+
+.landing-details-page .content .details-container p{
+  color: var(--dark-gray);
+  font-size: var(--mobile-paragraph);
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  max-width: 400px;
+}
+
+
+.link-not-found-page .content {
+  
+}
+
+.link-not-found-page .content .image-container {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.link-not-found-page .content .back-to-home-btn {
+  margin-top: 6rem;
+  
+  max-width: 650px;
+}
+
+.contact-page .content .right-section,
+.reset-password-page .content .right-section{
+  display: none;
+}
+
+.contact-page .content .contact-form,
+.reset-password-page .content .reset-password-form {
+  margin: 5rem auto;
+
+  max-width: 380px;
+  background-color: #fff;
+  box-shadow: 0px 3px 66px rgba(0, 0, 0, 0.06);
+  padding: 2.5rem 1.75rem 2rem 1.75rem;
+  border-radius: var(--default-border-radius);
+}
+
+.contact-page .content .contact-form  label,
+.login-page .content .login-form label,
+.register-page .content .register-form label,
+.reset-password-page .content .reset-password-form label{
+  font-size: var(--mobile-label);
+  font-weight: 450;
+}
+
+.contact-page .content .contact-form .form-control,
+.login-page .content .login-form .form-control,
+.register-page .content .register-form .form-control,
+.forgot-password-modal .modal-content .form-control,
+.reset-password-page .content .reset-password-form .form-control   {
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: var(--default-border-radius);
+  font-size: var(--mobile-input);
+  padding: .75rem .75rem .7rem 1rem;
+  border: 2px solid var(--input-gray);
+}
+
+
+
+.contact-page .content .contact-form .contact-message-control {
+  height: 80px;
+}
+
+
+.contact-page .content .contact-form .form-control::placeholder {
+  color: var(--dark-gray);
+}
+
+
+.login-page .content .login-form .form-control-error,
+.register-page .content .register-form .form-control-error,
+.forgot-password-modal .modal-content .form-control-error,
+.contact-page .content .contact-form .form-control-error,
+.reset-password-page .content .reset-password-form  .form-control-error{
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: var(--default-border-radius);
+  font-size: var(--mobile-input);
+  padding: .75rem .75rem .7rem 1rem;
+  border: 2px solid var(--error-red);
+}
+
+
+/* .reset-password-page .content .reset-password-form {
+  margin: 11rem auto;
+  position: relative;
+  max-width: 380px;
+  background-color: #fff;
+  box-shadow: 0px 3px 66px rgba(0, 0, 0, 0.06);
+  padding: 2.5rem 1.75rem 2rem 1.75rem;
+  border-radius: var(--default-border-radius);
+} */
+
+
+
+.login-page {
+
+}
+
+
+.login-page .content .login-form {
+  margin: 5rem auto;
+  position: relative;
+  max-width: 380px;
+  background-color: #fff;
+  box-shadow: 0px 3px 66px rgba(0, 0, 0, 0.06);
+  padding: 2.5rem 1.75rem 2rem 1.75rem;
+  border-radius: var(--default-border-radius);
+}
+
+.login-page .content .login-form .forgot-password {
+  text-align: center;
+  font-size: var(--mobile-label);
+  font-weight: 500;
+}
+
+.login-page .content .login-form .register-prompt,
+.register-page .content .register-form .login-prompt {
+  text-align: center;
+  font-size: var(--mobile-label);
+}
+
+.register-page .content .register-form {
+  margin: 4rem auto;
+  position: relative;
+  max-width: 380px;
+  background-color: #fff;
+  box-shadow: 0px 3px 66px rgba(0, 0, 0, 0.06);
+  padding: 2.5rem 1.75rem 0rem 1.75rem;
+  border-radius: var(--default-border-radius);
+}
+
+.register-page .content .register-form h2,
+.login-page .content .login-form h2 {
+  font-weight: 600;
+  font-size: var(--mobile-heading-primary);
+}
+
+.forgot-password-page .forgot-password-prompt {
+  font-size: var(--desktop-label);
+  text-decoration: none;
+  text-align: center;
+}
+
+.forgot-password-modal {
+
+
+
+}
+
+.forgot-password-modal .modal-content {
+  padding: .4rem;
+  border-radius: var(--default-border-radius);
+}
+
+
+
+.forgot-password-modal .modal-content label {
+  font-size: var(--mobile-label);
+}
+
+.forgot-password-modal .modal-header  {
+  display: grid;
+}
+
+.forgot-password-modal .modal-header h5 {
+  font-size: var(--mobile-heading-secondary);
+  font-weight: 600;
+  
+
+
+}
+
+.forgot-password-modal .modal-header hr {
+  color: var(--primary-purple);
+  opacity: 1;
+  margin: .15rem 0 .7rem 0;
+  width: 200px;
+  height: 2px;
+}
+
+.forgot-password-modal .modal-header p {
+  font-size: var(--mobile-paragraph);
+  color: var(--dark-gray);
+}
+
+.forgot-password-modal .modal-header button {
+  box-shadow: none;
+}
+
+.forgot-password-modal .modal-body {
+
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.forgot-password-modal .modal-footer {
+  
+}
+
+
+.forgot-password-modal .send-forgot-password-btn {
+  background-color: var(--primary-purple);
+  width: 100%;
+  color: #fff;
+  font-weight: 500;
+  font-size: var(--laptop-paragraph);
+  padding: .65rem;
+  box-shadow: none;
+}
+
+.my-uberlinks-page .content {
+ 
+}
+
+.my-uberlinks-page .content .main-section p {
+  margin-bottom: 4rem;
+}
+
+.my-uberlinks-page .content .uberlink-card-section {
+  margin-top: 2rem;
+}
+
+
+.my-uberlinks-page .content .no-uberlink-section {
+
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.my-uberlinks-page .content .no-uberlink-section h1 {
+  font-weight: 600;
+
+  margin-top: 1.5rem;
+  font-size: var(--mobile-heading-secondary);
+
+}
+
+.my-uberlinks-page .content .no-uberlink-section p {
+  font-size: var(--mobile-paragraph);
+  color: var(--dark-gray);
+}
+
+.my-uberlinks-page .content .no-uberlink-section img {
+  width: 100%;
+  max-width: 510px;
+}
+
+.my-uberlinks-page .content .no-uberlink-section button {
+  background-color: var(--primary-purple);
+  color: #fff;
+  font-size: var(--mobile-input);
+  padding: .8rem;
+  max-width: 490px;
+  width: 100%;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--default-border-radius);
+  transition: .3s ease-in-out;
+}
+
+
+.uberlink-card {
+  border: none;
+  max-width: 900px;
+  box-shadow: 0px 3px 66px rgba(0, 0, 0, 0.06);
+  border-radius: var(--default-border-radius);
+  height: 105px;
+  padding: .75rem;
+  margin-bottom: .4rem;
+  
+}
+
+.uberlink-card .header {
+
+  display: flex;
+
+}
+
+
+.uberlink-card .copy-icon {
+  margin-left: .6rem;
+  cursor: pointer; 
+
+
+}
+
+.uberlink-card .dropdown {
+  margin-right: 0;
+  margin-left: auto;
+
+
+}
+
+.uberlink-card h3 {
+
+  font-weight: 600;
+  font-size: var(--mobile-subheading);
+  color: #fff;
+}
+
+.uberlink-card .original-link {
+  color: var(--input-gray);
+  white-space: nowrap;
+}
+
+.uberlink-card p {
+  font-size: var(--mobile-label);
+  color: #fff;
+
+}
+
+.uberlink-card .metadata {
+  margin-top: .5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.uberlink-card .date-section {
+  padding: .35rem;
+  width: fit-content;
+
+  border-radius: var(--default-border-radius);
+}
+
+.uberlink-card .date-section p {
+  
+}
+
+.uberlink-card .delete-section {
+  padding: .35rem;
+  cursor: pointer;
+  border-radius: var(--default-border-radius);
+
+
+}
+
+.pagination-container {
+  height: 32vh;
+  max-width: 900px;
+  margin-top: 4rem;
+}
+
+.pagination-container .content .pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.email-confirmed-page .content {
+  text-align: center;
+}
+
+
+.email-confirmed-page .content img {
+  margin-top: 4rem;
+  
+  width: 82%;
+  max-width: 460px;
+}
+
+.email-confirmed-page .content .btn-container {
+  margin-top: 4rem;
+}
+
+.email-confirmed-page .content button {
+  max-width: 780px;
+  color: #fff;
+  font-size: var(--mobile-input);
+  padding: .8rem;
+  width: 100%;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--default-border-radius);
+  transition: .3s ease-in-out;
+}
+
+.email-confirmed-page .content .proceed-login-btn {
+  background-color: var(--primary-purple);
+}
+
+.email-confirmed-page .content .proceed-login-btn:hover {
+  background-color: var(--hover-purple);
+}
+
+.email-confirmed-page .content .resend-confirmation-btn {
+  margin-top: .75rem;
+  background-color: var(--dark-black);
+
+}
+
+.email-confirmed-page .content .resend-confirmation-btn:hover {
+  background-color: rgb(22, 22, 22);
+}
+
+
+
+
+.footer {
+  background-color: var(--dark-black);
+  padding: 1.2rem;
+
+  
+} 
+
+.footer-body {
+  padding: 1.7rem;
+}
+
+
+.footer-body h6 {
+  color: #fff;
+  
+}
+
+
+@media only screen and (min-width: 760px) {
+
+  body {
+    height: 60vh;
+    max-height: 1000px
+  }
+
+
+  
+  .navbar-container .navbar-nav button {
+    font-size: var(--tablet-paragraph);
+
+  }
+
+  .navbar-container .contact-btn {
+
+    font-size: var(--tablet-paragraph);
+    padding: .9rem;
+  }
+
+  .landing-page .content {
+    text-align: center;
+  }
+
+  .landing-page .content,
+  .contact-page .content,
+  .link-not-found-page .content,
+  .reset-password-page .content,
+  .email-confirmed-page .content {
+    /* background-color: rebeccapurple; */
+    padding-top: 4rem;
+  }
+
+  .landing-page .content .main-section h1,
+  .contact-page .content .main-section h1,
+  .link-not-found-page .content .main-section h1,
+  .my-uberlinks-page .content .main-section h1, 
+  .reset-password-page .content .main-section h1,
+  .email-confirmed-page .content .main-section h1{
+
+      font-size: var(--tablet-heading-primary);
+    
+  }
+  
+  .landing-page .content .main-section p,
+  .contact-page .content .main-section p,
+  .link-not-found-page .content .main-section p,
+  .reset-password-page .content .main-section p,
+  .email-confirmed-page .content .main-section p{
+    font-size: var(--tablet-paragraph);
+    margin: 0 auto;
+
+  }
+
+  .my-uberlinks-page .content .main-section p {
+    font-size: var(--tablet-paragraph);
+
+  }
+
+  .landing-page .content .search-section  {
+    width: 80%;
+    margin: 5rem auto;
+
+  }
+
+  .landing-page .content .search-section .form-control {
+    font-size: var(--tablet-input);
+  }
+
+  .landing-page .content .search-section .search-btn {
+    font-size: var(--tablet-input);
+    padding: .9rem;
+  }
+
+  .contact-page .content .contact-form .send-message-btn ,
+  .reset-password-page .content .reset-password-form .reset-password-btn,
+  .login-page .content .login-form .login-btn,
+  .register-page .content .register-form .register-btn {
+    padding: .95rem;
+  }
+
+  .landing-details-page {
+    margin: 6rem 0 8rem 0;
+  }
+    
+  .landing-details-page .content .details-container h3{
+    font-size: var(--tablet-heading-secondary);
+    padding: .3rem 0 .3rem 0;
+  
+  }
+
+  .landing-details-page .content .details-container p{
+    font-size: var(--tablet-paragraph);
+    margin-bottom: 5rem;
+    max-width: 300px;
+  }
+
+  .landing-details-page .content .details-container .icon {
+    height: 47px;
+  }
+
+  .link-not-found-page .content {
+    text-align: center;
+  }
+
+  
+
+  .link-not-found-page .content .image-container {
+      margin-top: 7rem;
+  }
+
+  .link-not-found-page .content .image-container img {
+    height: 265px;
+  }
+
+  .link-not-found-page .content .back-to-home-btn {
+    padding: .95rem;
+    margin-top: 6rem;
+    font-size: var(--tablet-input);
+  }
+
+
+
+  .contact-page .content .contact-form .form-control,
+  .login-page .content .login-form .form-control,
+  .register-page .content .register-form .form-control,
+  .reset-password-page .content .reset-password-form .form-control{
+    font-size: var(--tablet-input);
+  }
+
+  .contact-page .content .contact-form .contact-message-control {
+    font-size: var(--tablet-paragraph);
+    min-height: 90px;
+    max-height: 100px;
+  }
+
+
+
+.email-confirmed-page .content .btn-container {
+  margin-top: 6rem;
+}
+
+.email-confirmed-page .content button {
+  font-size: var(--tablet-input);
+  padding: 1.2rem;
+}
+
+.email-confirmed-page .content .proceed-login-btn {
+
+}
+
+
+.email-confirmed-page .content .resend-confirmation-btn {
+
+}
+
+
+}
+
+
+@media only screen and (min-width: 992px) {
+
+
+  .navbar-container .container-fluid {
+    display: flex;
+  }
+  
+  .navbar-container .navbar-collapse {
+    justify-content: flex-end;
+
+  }
+
+  
+  .navbar-container .navbar-nav button {
+    font-size: var(--laptop-input);
+    margin-left: 1.5rem;
+
+  }
+
+  .navbar-container .contact-btn {
+    margin: 0;
+    font-size: var(--laptop-input);
+    padding: .8rem;
+    width: 150px;
+    margin-left: 4rem;
+  }
+
+
+  .navbar-container p {
+    color: #fff;
+    text-align: center;
+    font-size: var(--laptop-input);
+    font-weight: 500;
+  }
+
+
+  .landing-details-page .content .details-container {
+      padding: 0 1rem 0 1rem;
+  } 
+
+  .landing-details-page .content .details-container .icon {
+    height: 40px;
+  }
+
+
+  .my-uberlinks-page .content {
+
+  }
+  
+  .my-uberlinks-page .content .uberlink-card-section {
+
+  }
+
+
+  .my-uberlinks-page .content .no-uberlink-section {
+    margin-top: 9rem;
+
+  }
+
+  .my-uberlinks-page .content .no-uberlink-section h1 {
+    font-size: var(--laptop-heading-secondary);
+    margin-top: 3rem;
+
+  }
+
+  .my-uberlinks-page .content .no-uberlink-section p {
+    margin-top: .5rem;
+    margin-bottom: 12rem;
+    font-size: var(--laptop-paragraph);
+
+  }
+
+  .my-uberlinks-page .content .no-uberlink-section img {
+
+  }
+
+  .my-uberlinks-page .content .no-uberlink-section button {
+    padding: 1rem;
+    font-size: var(--laptop-input);
+    margin-top: 1rem;
+  }
+
+  .uberlink-card {
+    height: 100%;
+
+  }
+
+
+  .uberlink-card .icon {
+    bottom: .1rem;
+    left: 13.5rem;
+  } 
+
+  .uberlink-card h3 {
+    font-size: var(--mobile-heading-secondary);
+  }
+
+  .uberlink-card .original-link {
+    margin-top: .3rem;
+    font-size: var(--tablet-paragraph);
+  }
+
+  .uberlink-card p {
+
+    font-size: .72rem;
+  }
+
+  .uberlink-card .metadata {
+ 
+  }
+
+  .uberlink-card .date-section {
+    padding: .5rem;
+  }
+
+  .uberlink-card .date-section p {
+    
+  }
+
+  .uberlink-card .delete-section {
+    padding: .5rem;
+
+  }
+
+  .reset-password-page .content .reset-password-form {
+
+  }
+
+  .pagination-container {
+   
+  }
+
+  .pagination-container .content .pagination {
+
+  }
+
+}
+
+
+@media only screen and (min-width: 1060px) {
+
+.landing-page .content,
+.link-not-found-page .content{
+  padding-top: 4.5rem;
+  text-align: center;
+  
+}
+
+.contact-page .content,
+.reset-password-page .content,
+.email-confirmed-page .content{
+  padding-top: 4.5rem;
+}
+
+.landing-page .content .main-section h1,
+.contact-page .content .main-section h1,
+.link-not-found-page .content .main-section h1,
+.my-uberlinks-page .content .main-section h1,
+.reset-password-page .content .main-section h1,
+.email-confirmed-page .content .main-section h1 {
+  font-size: var(--laptop-heading-primary);
+  padding-bottom: .6rem;
+}
+
+.landing-page .content .main-section p,
+.link-not-found-page .content .main-section p,
+.my-uberlinks-page .content .main-section p,
+.email-confirmed-page .content .main-section p{
+
+  font-size: var(--laptop-paragraph);
+  width: 65%;
+
+}
+
+.contact-page .content .main-section p  {
+  font-size: var(--laptop-paragraph);
+  
+}
+
+.landing-page .content .search-section {
+
+  margin: 6rem auto;
+  width: 70%;
+}
+
+.landing-page .content .search-section .form-control {
+  padding: 1.2rem;
+  font-size: var(--laptop-input);
+}
+
+
+.landing-page .content .search-section .search-btn{
+  padding: 1rem;
+  font-size: var(--laptop-input);
+}
+
+
+
+
+
+
+
+.link-not-found-page .content {
+
+}
+
+
+
+.link-not-found-page .content .image-container {
+    margin-top: 7rem;
+}
+
+.link-not-found-page .content .image-container img {
+  height: 345px;
+}
+
+.link-not-found-page .content .back-to-home-btn {
+  padding: 1.2rem;
+  font-size: var(--laptop-input);
+  margin-top: 7rem;
+}
+
+.contact-page .content, 
+.reset-password-page .content {
+  display: flex;
+}
+
+.contact-page .content .left-section,
+.reset-password-page .content .left-section {
+
+  width: 50%;
+}
+
+.contact-page .content .right-section,
+.reset-password-page .content .right-section {
+  display: block;
+
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-page .content .right-section img{
+  width: 100%;
+  max-width: 540px;
+
+
+}
+
+.reset-password-page .content .right-section img {
+  width: 100%;
+  max-width: 470px;
+  margin-top: 4.5rem;
+  margin-bottom: 5.5rem;
+}
+
+
+.contact-page .content .contact-form,
+.reset-password-page .content .reset-password-form  {
+  float: left;
+}
+
+.contact-page .content .contact-form .send-message-btn {
+  padding: .9rem;
+}
+
+
+.login-page .content .login-form {
+
+}
+
+.login-page .content .login-form h2 {
+
+}
+
+.login-page .content .login-form .register-prompt,
+
+.register-page .content .register-form .login-prompt {
+  font-size: var(--mobile-label);
+}
+
+
+.forgot-password-page .forgot-password-prompt {
+
+}
+
+.forgot-password-modal {
+
+
+
+}
+
+.forgot-password-modal .modal-content {
+  padding: .6rem;
+
+}
+
+
+.forgot-password-modal .modal-header  {
+
+}
+
+.forgot-password-modal .modal-header h5 {
+  font-size: var(--desktop-subheading);
+}
+
+.forgot-password-modal .modal-header hr {
+
+}
+
+.forgot-password-modal .modal-header p {
+  font-size: var(--tablet-paragraph);
+}
+
+
+.forgot-password-modal .modal-body {
+
+}
+
+.forgot-password-modal .modal-footer {
+  
+}
+
+
+.forgot-password-modal .send-forgot-password-btn {
+  padding: .9rem;
+}
+
+
+
+
+.email-confirmed-page .content .btn-container {
+  margin-top: 8rem;
+}
+
+.email-confirmed-page .content button {
+  font-size: var(--laptop-input);
+  padding: 1.3rem;
+}
+
+.email-confirmed-page .content .proceed-login-btn {
+
+}
+
+
+.email-confirmed-page .content .resend-confirmation-btn {
+
+}
+
+
+
+
+footer {
+
+  
+} 
+
+.footer-body {
+  padding: 1.5rem;
+}
+
+
+.footer-body h6 {
+
+  
+}
+
+}
+
+
+
+@media only screen and (min-width: 1460px) {
+
+  .navbar-container .container-fluid .navbar-collapse .contact-btn {
+    font-size: var(--desktop-input);
+    margin-left: 4rem;
+  }
+
+  .navbar-container .navbar-nav button {
+    font-size: var(--desktop-input);
+  }
+
+
+  .navbar-container p {
+    font-size: var(--desktop-input);
+  }
+
+  .landing-page .content,
+  .link-not-found-page .content,
+  .contact-page .content,
+  .email-confirmed-page .content{
+    padding-top: 5.2rem;
+
+  }
+
+  .landing-page .content .main-section h1,
+  .contact-page .content .main-section h1,
+  .link-not-found-page .content .main-section h1,
+  .my-uberlinks-page .content .main-section h1,
+  .reset-password-page .content .main-section h1,
+  .email-confirmed-page .content .main-section h1 {
+    font-size: var(--desktop-heading-primary);
+    padding-bottom: .6rem;
+  }
+  
+  .landing-page .content .main-section p,
+  .contact-page .content .main-section p,
+  .link-not-found-page .content .main-section p,
+  .my-uberlinks-page .content .main-section p,
+  .email-confirmed-page .content .main-section p{
+    font-size: var(--desktop-paragraph-primary);
+  }
+
+  .landing-page .content .search-section .form-control {
+    padding: 1.4rem;
+    font-size: var(--desktop-input);
+  }
+
+
+  .landing-page .content .search-section .search-btn{
+    padding: 1rem;
+    font-size: var(--desktop-input);
+  }
+
+  .landing-page .content .search-section .search-form .icon {
+
+    top: 3.4rem;
+  }
+
+
+  
+  .landing-details-page .content .details-container h3{
+    font-size: var(--mobile-heading-primary);
+    padding: .7rem 0 .7rem 0;
+  
+  }
+
+  .landing-details-page .content .details-container p{
+    font-size: var(--desktop-paragraph-primary);
+    max-width: 370px;
+  }
+
+  .navbar-container .navbar-logout-btn {
+    font-size: var(--desktop-input);
+
+  }
+
+  .link-not-found-page .content {
+  
+  }
+
+  .link-not-found-page .content .image-container {
+      margin-top: 5rem;
+  }
+
+  .link-not-found-page .content .image-container img {
+    height: 380px;
+  }
+
+  .link-not-found-page .content .back-to-home-btn {
+    margin-top: 5rem;
+    font-size: var(--desktop-input);
+  }
+
+  .contact-page .content .contact-form .form-control,
+  .login-page .content .login-form .form-control,
+  .register-page .content .register-form .form-control,
+  .reset-password-page .content .reset-password-form .form-control {
+    padding: .85rem .85rem .85rem 1.1rem;
+    font-size: var(--laptop-paragraph);
+  }
+
+  .my-uberlinks-page .content {
+
+  }
+  
+  .my-uberlinks-page .content .uberlink-card-section {
+
+  }
+
+
+  .my-uberlinks-page .content .no-uberlink-section {
+
+  }
+
+  .my-uberlinks-page .content .no-uberlink-section h1 {
+    font-size: var(--laptop-heading-primary);
+    
+  }
+
+  .my-uberlinks-page .content .no-uberlink-section p {
+    font-size: var(--desktop-paragraph-primary);
+
+  }
+
+  .my-uberlinks-page .content .no-uberlink-section img {
+
+  }
+
+
+
+  .uberlink-card {
+
+  }
+
+
+  .uberlink-card .icon {
+
+  } 
+
+  .uberlink-card h3 {
+ 
+  }
+
+  .uberlink-card .original-link {
+
+  }
+
+  .uberlink-card p {
+
+  }
+
+  .uberlink-card .metadata {
+ 
+  }
+
+  .uberlink-card .date-section {
+
+  }
+
+  .uberlink-card .date-section p {
+    
+  }
+
+  .uberlink-card .delete-section {
+
+
+  }
+
+  .pagination-container {
+   
+  }
+
+  .pagination-container .content .pagination {
+
+  }
+
+
+  .contact-page .content .right-section img{
+ 
+    max-width: 650px;
+
+
+  }
+
+  .reset-password-page .content .right-section img {
+  
+    max-width: 590px;
+    margin-top: 3rem;
+  }
+
+  
+.email-confirmed-page .content .btn-container {
+  margin-top: 9rem;
+}
+
+.email-confirmed-page .content button {
+  font-size: var(--desktop-input);
+  padding: 1.5rem;
+}
+
+.email-confirmed-page .content .proceed-login-btn {
+}
+
+
+.email-confirmed-page .content .resend-confirmation-btn {
+
+}
+
+
+  footer {
+
+    
+  } 
+  
+  .footer-body {
+    padding: 1.5rem;
+  }
+  
+  
+  .footer-body h6 {
+
+    
+  }
+
+}

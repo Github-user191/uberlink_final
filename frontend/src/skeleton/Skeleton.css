@@ -1,0 +1,81 @@
+.skeleton {
+    animation: skeleton-loading 1.3s linear infinite alternate;
+    background: #ddd;
+ 
+    border-radius: 4px;
+
+}
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+
+.wrapper {
+
+ margin: 0 auto;
+
+}
+
+
+/* TYPES */
+.uberlink-card-skeleton {
+    border: none;
+    max-width: 900px;
+    background-color: #fff;
+    box-shadow: 0px 3px 66px rgba(0, 0, 0, 0.06);
+    border-radius: var(--default-border-radius);
+    height: 105px;
+    padding: .75rem;
+    margin-bottom: .6rem;
+}
+
+
+.uberlink-card-skeleton .skeleton.shortened-link-text{
+    height: 21px;
+    width: 50%;
+    margin-bottom: .6rem;
+}
+
+.uberlink-card-skeleton .skeleton.original-link-text {
+    height: 21px;
+    width: 80%;
+    margin-bottom: .6rem;
+}
+
+
+.uberlink-card-skeleton .skeleton.metadata-text {
+    height: 21px;
+    width: 35%;
+}
+
+.footer {
+    margin-top: 10rem;
+}
+
+@media only screen and (min-width: 1060px) {
+    .uberlink-card-skeleton {
+
+        height: 122px;
+        padding: .9rem;
+    }   
+    
+    
+    .uberlink-card-skeleton .skeleton.shortened-link-text{
+        height: 25px;
+  
+    }
+    
+    .uberlink-card-skeleton .skeleton.original-link-text {
+        height: 25px;
+    }
+    
+    
+    .uberlink-card-skeleton .skeleton.metadata-text {
+        height: 25px;
+    }
+}
