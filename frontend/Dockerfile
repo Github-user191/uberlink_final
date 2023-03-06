@@ -15,6 +15,6 @@ RUN npm run build
 FROM nginx:1.21.6-alpine
 WORKDIR /etc/nginx/conf.d
 COPY --from=BUILD /app/build/ /usr/share/nginx/html
-COPY /nginx-config/default.conf ./default.conf
+COPY ./default.conf ./default.conf
 #CMD ["npm", "start"]
 ENTRYPOINT  ["nginx", "-g", "daemon off;"]

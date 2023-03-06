@@ -96,7 +96,6 @@ public class UserServiceImpl implements UserService {
         roleSet.add(role);
         user.setRoles(roleSet);
 
-        user.setEmailVerified(true);
 
         if (userRepository.existsByEmailAddress(user.getEmailAddress())) {
             throw new UserException("Account already exists with this email");
