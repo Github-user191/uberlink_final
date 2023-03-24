@@ -68,7 +68,7 @@ const LandingPage = () => {
         originalLink: link.originalLink,
         shortenedLink: res.data.shortenedLink
       })
-      if (res.status === 200) {
+      if (res.status === 201) {
         setStatus(true)
         setLoading(true)
 
