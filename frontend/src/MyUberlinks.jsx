@@ -111,7 +111,7 @@ const MyUberlinks = () => {
                             uberlinks.map((link, idx) => {
                                 return (
                                     <UberlinkCard
-                                        shortenedLink={process.env.REACT_APP_BASE_URL + "/link/" + link.shortenedLink}
+                                        shortenedLink={process.env.REACT_APP_BASE_URL + "/" + link.shortenedLink}
                                         originalLink={link.originalLink}
                                         lightColor={
                                             link.active

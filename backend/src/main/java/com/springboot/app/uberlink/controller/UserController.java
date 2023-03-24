@@ -8,7 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
 import java.security.Principal;
@@ -21,12 +20,11 @@ public class UserController {
     private final UserService userService;
     private final ErrorValidationServiceImpl errorValidationService;
 
+
     public UserController(UserService userService, ErrorValidationServiceImpl errorValidationService) {
         this.userService = userService;
         this.errorValidationService = errorValidationService;
     }
-
-
 
     @GetMapping("/info")
     public ResponseEntity<UserAndLinkDTO> getUserAndPostInfo(Principal principal) {

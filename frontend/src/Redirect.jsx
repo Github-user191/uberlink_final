@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router'
+import { Link } from 'react-router-dom';
 import LinkNotFound from './LinkNotFound';
 import LinkService from './services/LinkService';
 
@@ -12,7 +13,9 @@ const Redirect = () => {
     })
 
     useEffect(() => {
+
         getOriginalLink();
+
     }, [])
 
 
@@ -21,22 +24,21 @@ const Redirect = () => {
 
         LinkService.getOriginalLink(shortenedLink)
             .then(res => {
-     
                 window.location.href = res.data;
             }).catch(err => {
                 setError({
-                    linkNotExistError: err.response.data.invalidLinkError
+                    linkNotExistError: "Error"
                 })
+    
             })
-            
+
+
     }
 
   return (
     <div>
 
-    {error.linkNotExistError && (
-        <LinkNotFound/>
-    )}
+    {error.linkNotExistError && <LinkNotFound/> }
 
     </div>
   )

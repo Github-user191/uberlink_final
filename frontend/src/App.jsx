@@ -50,7 +50,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/link/:shortenedLink" element={<Redirect />} />
+        <Route path="/:shortenedLink" element={<Redirect />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
