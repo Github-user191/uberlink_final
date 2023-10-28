@@ -11,7 +11,7 @@ services:
     environment:
       SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
       SPRING_DATASOURCE_USERNAME: ${MYSQL_DB_USER}
-      SPRING_DATASOURCE_PASSWORD: ${MYSQL_DB_PASSWORD}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
       SPRING_JPA_HIBERNATE_DDL-AUTO: update
       SPRING_MAIL_USERNAME: ${SPRING_MAIL_USERNAME}
       SPRING_MAIL_PASSWORD: ${SPRING_MAIL_PASSWORD}
@@ -21,8 +21,8 @@ services:
   uberlink-frontend:
     build:
       context: ./frontend # Use an image built from the specified dockerfile in the `polling-app-client` directory.
-        #ports:
-      #- "3000:443"
+    ports:
+      - "3000:80"
       #- "80:80" # HOST : CONTAINER 
     restart: always
     depends_on:
@@ -58,8 +58,8 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_USER: ${MYSQL_DB_USER}
-      MYSQL_ROOT_PASSWORD: ${MYSQL_DB_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DB_NAME}
+      MYSQL_ROOT_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
+      MYSQL_DATABASE: ${SPRING_DATASOURCE_DATABASE}
     volumes:
       - uberlink-db-volume:/var/lib/mysql
     networks:

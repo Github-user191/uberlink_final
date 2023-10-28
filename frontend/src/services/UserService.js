@@ -1,8 +1,7 @@
 import axios from "axios";
+import { webStore } from "../utils/WebStore";
 
-
-const BASE_URL="/api/user";
-
+const BASE_URL = `${webStore.APP_URL}/api/user`;
 
 class UserService {
 

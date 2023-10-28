@@ -55,6 +55,10 @@ public class AuthController {
         this.emailService = emailService;
     }
 
+    @GetMapping("/welcome")
+    public String welcome() {
+        return "Welcome";
+    }
 
     @PostMapping("/authenticate")
     public ResponseEntity<?> authenticate(@Valid @RequestBody LoginRequest loginRequest, BindingResult result, Principal principal, HttpServletRequest request) {

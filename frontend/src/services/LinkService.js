@@ -1,7 +1,8 @@
 import axios from "axios";
+import { webStore } from "../utils/WebStore";
 // import.meta.env.VITE_REACT_APP_URI
 
-const BASE_URL = "/api/link/"
+const BASE_URL = `${webStore.APP_URL}/api/link/`;
 
 class LinkService {
 

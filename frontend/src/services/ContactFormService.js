@@ -1,7 +1,7 @@
 import axios from "axios";
+import { webStore } from "../utils/WebStore";
 
-const BASE_URL = "/api/contact/send"
-
+const BASE_URL = `${webStore.APP_URL}/api/contact/send`;
 
 class ContactFormService {
 

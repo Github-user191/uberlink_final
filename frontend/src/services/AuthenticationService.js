@@ -1,9 +1,11 @@
 import axios from 'axios'
 import jwtDecode from 'jwt-decode';
+import { webStore } from '../utils/WebStore';
 
 
-const BASE_URL = "/api/auth"
+const BASE_URL = `${webStore.APP_URL}/api/auth`;
 // axios.defaults.baseURL = `https://localhost:8080`
+
 
 class AuthenticationService {
 
