@@ -3,6 +3,7 @@ import { webStore } from "../utils/WebStore";
 
 const BASE_URL = `${webStore.APP_URL}/api/contact/send`;
 
+
 class ContactFormService {
 
     async sendContactForm(contactForm) {

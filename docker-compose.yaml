@@ -22,7 +22,7 @@ services:
     build:
       context: ./frontend # Use an image built from the specified dockerfile in the `polling-app-client` directory.
     ports:
-      - "3000:80"
+      - "3000:3000"
       #- "80:80" # HOST : CONTAINER 
     restart: always
     depends_on:
