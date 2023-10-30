@@ -11,6 +11,7 @@ import UberlinkCard from "./UberlinkCard";
 import noUberlinkIllustration from "./assets/no-uberlinks-illustration.svg";
 import SkeletonUberlinkCard from "./skeleton/SkeletonUberlinkCard";
 import {Link} from "react-router-dom";
+import { webStore } from "./utils/WebStore";
 
 const MyUberlinks = () => {
     const [uberlinks, setUberlinks] = useState([]);
@@ -111,7 +112,7 @@ const MyUberlinks = () => {
                             uberlinks.map((link, idx) => {
                                 return (
                                     <UberlinkCard
-                                        shortenedLink={process.env.REACT_APP_BASE_URL + "/" + link.shortenedLink}
+                                        shortenedLink={webStore.APP_DOMAIN + "/" + link.shortenedLink}
                                         originalLink={link.originalLink}
                                         lightColor={
                                             link.active
