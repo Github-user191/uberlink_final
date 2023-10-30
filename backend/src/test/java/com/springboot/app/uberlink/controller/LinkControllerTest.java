@@ -50,8 +50,8 @@ public class LinkControllerTest {
     @BeforeEach
     void setUp() {
         user = new User(1L, "John Doe", "johndoe@gmail.com", "password");
-        link1 = new Link(1L, "uberlink.tech/5563JhdZ", "https://www.youtube.com/watch?3=393dkodwkd3", true, "john@gmail.com", user);
-        link2 = new Link(2L, "uberlink.tech/cCu887Sj", "https://www.facebook/com?post=288333", true, "john@gmail.com", user);
+        link1 = new Link(1L, "uberlink.online/5563JhdZ", "https://www.youtube.com/watch?3=393dkodwkd3", true, "john@gmail.com", user);
+        link2 = new Link(2L, "uberlink.online/cCu887Sj", "https://www.facebook/com?post=288333", true, "john@gmail.com", user);
     }
 
     @WithMockUser(username = "admin", password = "password")
