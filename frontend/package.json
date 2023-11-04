@@ -35,7 +35,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy":"https://uberlink.azurewebsites.net",
+  "proxy": "https://uberlink.azurewebsites.net",
   "eslintConfig": {
     "extends": [
       "react-app",
