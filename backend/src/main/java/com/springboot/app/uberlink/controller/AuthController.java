@@ -170,7 +170,7 @@ public class AuthController {
 
 
     private String applicationURL(HttpServletRequest request) {
-        return "https://uberlink.netlify.app" + request.getContextPath();
+        return "https://uberlink.online" + request.getContextPath();
     }
 
 
