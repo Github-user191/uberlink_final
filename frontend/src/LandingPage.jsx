@@ -125,7 +125,7 @@ const LandingPage = () => {
               <div className="mb-1">
 
                 {status === true && (
-                  <CopyToClipboard text={`${webStore.APP_DOMAIN + "/link/" + link.shortenedLink}`} onCopy={onCopy}>
+                  <CopyToClipboard text={`${webStore.APP_DOMAIN + "/" + link.shortenedLink}`} onCopy={onCopy}>
                     <div className="icon">
                       <FaCopy style={{ fill: "var(--dark-gray)", position: "absolute" }} />
                     </div>
@@ -141,7 +141,7 @@ const LandingPage = () => {
 
                 {errors.linkError ? <label id="form-error-status">{errors.linkError}</label> : ""}
                 <input className={errors.linkError ? "form-control form-control-error" : "form-control"} type="text" placeholder="Enter your Link" name="originalLink"
-                  value={status === true ? `${webStore.APP_DOMAIN + "/link/" + link.shortenedLink}` : link.originalLink} onChange={handleChange} />
+                  value={status === true ? `${webStore.APP_DOMAIN + "/" + link.shortenedLink}` : link.originalLink} onChange={handleChange} />
 
                 <button className="search-btn" disabled={status ? true : false}>{loading ? <SyncLoader color='white' size={6} /> : "Get Short link"}</button>
 
