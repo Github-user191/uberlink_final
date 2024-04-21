@@ -26,3 +26,6 @@ frontend/!.vscode/extensions.json
 *.njsproj
 *.sln
 *.sw?
+
+# Local Netlify folder
+.netlify

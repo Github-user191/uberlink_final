@@ -31,11 +31,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && cp _redirects build/_redirects",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://uberlink.azurewebsites.net",
+  "proxy": "http://mycontabovps.site:8080",
   "eslintConfig": {
     "extends": [
       "react-app",
